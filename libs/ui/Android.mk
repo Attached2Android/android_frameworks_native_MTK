@@ -16,7 +16,7 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_CLANG := true
-LOCAL_CPPFLAGS := -std=c++1y -Weverything -Werror
+LOCAL_CPPFLAGS := -std=c++1y -Weverything
 # LOCAL_SANITIZE := integer
 
 LOCAL_SDCLANG_LTO := true
@@ -48,7 +48,10 @@ LOCAL_SRC_FILES := \
 	PixelFormat.cpp \
 	Rect.cpp \
 	Region.cpp \
-	UiConfig.cpp
+	UiConfig.cpp \
+	mediatek/Fence.cpp \
+	mediatek/IDumpTunnel.cpp \
+	mediatek/RefBaseDump.cpp
 
 LOCAL_SHARED_LIBRARIES := \
 	libbinder \
